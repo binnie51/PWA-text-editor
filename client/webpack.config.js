@@ -20,12 +20,12 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'JEST Text Editor'
+        title: 'JATE Text Editor'
       }),
       // Inject custom service worker
       new InjectManifest({
-        swSrc:"./src/sw.js",
-        swDest:"service-worker.js"
+        swSrc:"./src-sw.js",
+        swDest:"src-sw.js"
       }),
       // Create manifest.json file
       new WebpackPwaManifest({
